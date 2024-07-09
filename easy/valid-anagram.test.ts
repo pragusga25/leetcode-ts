@@ -1,4 +1,5 @@
-// https://leetcode.com/problems/valid-anagram/
+// Problem: https://leetcode.com/problems/valid-anagram/
+// Docs: https://leetcode.com/problems/valid-anagram/solutions/5443527/valid-anagram-checker-with-character-count/
 const isAnagram = (s: string, t: string): boolean => {
   if (s.length !== t.length) return false;
 

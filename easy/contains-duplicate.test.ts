@@ -1,4 +1,5 @@
-// https://leetcode.com/problems/contains-duplicate/
+// Problem: https://leetcode.com/problems/contains-duplicate/
+// Docs: https://leetcode.com/problems/contains-duplicate/solutions/5443488/solved-with-typescript/
 const containsDuplicate = (nums: number[]): boolean => {
   const map: Record<number, unknown> = {};
   for (let i = 0; i < nums.length; i++) {
