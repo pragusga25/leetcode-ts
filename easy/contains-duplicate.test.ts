@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/contains-duplicate/
-const containsDuplicate = (nums: number[]) => {
+const containsDuplicate = (nums: number[]): boolean => {
   const map: Record<number, unknown> = {};
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
