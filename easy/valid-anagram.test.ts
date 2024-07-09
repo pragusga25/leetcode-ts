@@ -34,9 +34,7 @@ describe('isAnagram', () => {
     expect(isAnagram('', '')).toBe(true);
     expect(isAnagram('a', 'a')).toBe(true);
     expect(isAnagram('kasur', 'rusak')).toBe(true);
-  });
 
-  test('Negative tests', () => {
     expect(isAnagram('anagram', 'nagram')).toBe(false);
     expect(isAnagram('', 'a')).toBe(false);
     expect(isAnagram('a', '')).toBe(false);
