@@ -13,7 +13,7 @@ const containsDuplicate = (nums: number[]): boolean => {
   return false;
 };
 
-describe('containsDuplicate', () => {
+describe('Contains Duplicate', () => {
   test('Positve tests', () => {
     expect(containsDuplicate([1, 2, 3, 4, 1])).toBe(true);
     expect(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])).toBe(true);

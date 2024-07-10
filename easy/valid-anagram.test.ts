@@ -29,7 +29,7 @@ const isAnagram = (s: string, t: string): boolean => {
   return charCounter.size === 0;
 };
 
-describe('isAnagram', () => {
+describe('Valid Anagram', () => {
   test('Positive tests', () => {
     expect(isAnagram('anagram', 'nagrama')).toBe(true);
     expect(isAnagram('', '')).toBe(true);
