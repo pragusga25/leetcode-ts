@@ -18,7 +18,7 @@ export const twoSum = (nums: number[], target: number): number[] => {
 };
 
 describe('Two Sum', () => {
-  test('Positive tests', () => {
+  it('should return the indices of the two numbers that add up to the target', () => {
     expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);
     expect(twoSum([3, 3], 6)).toEqual([0, 1]);
     expect(twoSum([2, 7, 11, 15], 17)).toEqual([0, 3]);

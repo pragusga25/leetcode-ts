@@ -14,7 +14,7 @@ const minOperations = (logs: string[]): number => {
 };
 
 describe('Crawler Log Folder', () => {
-  test('Positive tests', () => {
+  it('should return the minimum number of operations', () => {
     expect(minOperations(['d1/', 'd2/', './', 'd3/', '../', 'd31/'])).toBe(3);
     expect(minOperations(['d1/', '../', '../', '../'])).toBe(0);
     expect(minOperations(['../'])).toBe(0);

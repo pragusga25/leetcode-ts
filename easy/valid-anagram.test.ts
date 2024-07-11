@@ -30,12 +30,14 @@ const isAnagram = (s: string, t: string): boolean => {
 };
 
 describe('Valid Anagram', () => {
-  test('Positive tests', () => {
+  it('should return true if the strings are anagrams', () => {
     expect(isAnagram('anagram', 'nagrama')).toBe(true);
     expect(isAnagram('', '')).toBe(true);
     expect(isAnagram('a', 'a')).toBe(true);
     expect(isAnagram('kasur', 'rusak')).toBe(true);
+  });
 
+  it('should return false if the strings are not anagrams', () => {
     expect(isAnagram('anagram', 'nagram')).toBe(false);
     expect(isAnagram('', 'a')).toBe(false);
     expect(isAnagram('a', '')).toBe(false);

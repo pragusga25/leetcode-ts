@@ -37,7 +37,7 @@ const depthSort = (result: string[][]) => {
 };
 
 describe('Group Anagrams', () => {
-  test('Positive tests', () => {
+  it('should group anagrams', () => {
     expect(
       depthSort(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']))
     ).toEqual(depthSort([['bat'], ['nat', 'tan'], ['ate', 'eat', 'tea']]));
