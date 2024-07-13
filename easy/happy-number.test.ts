@@ -29,5 +29,6 @@ describe('Happy Number', () => {
   it('should return false if the number is not happy', () => {
     expect(isHappy(2)).toBeFalsy();
     expect(isHappy(3)).toBeFalsy();
+    expect(isHappy(4)).toBeFalsy();
   });
 });
