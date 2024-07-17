@@ -1,13 +1,7 @@
 // Problem: https://leetcode.com/problems/sqrtx/description/
-// Doc: https://leetcode.com/problems/sqrtx/solutions/5491801/efficient-binary-search-for-square-root-calculation/
+// Doc: https://leetcode.com/problems/sqrtx/solutions/5491842/efficient-binary-search-for-calculating-square-root/
 const mySqrt = (x: number): number => {
-  let [l, r] = [0, 1];
-  // We are not allowed to use Math.pow
-  // So we initialize r using this loop :v
-  for (let i = 1; i <= 31; i++) {
-    r *= i;
-  }
-  r--;
+  let [l, r] = [0, x];
 
   let ans = 0;
   while (l <= r) {
