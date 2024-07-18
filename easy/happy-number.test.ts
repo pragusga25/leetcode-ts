@@ -20,15 +20,28 @@ const isHappy = (n: number): boolean => {
 };
 
 describe('Happy Number', () => {
-  it('should return true if the number is happy', () => {
-    expect(isHappy(19)).toBeTruthy();
-    expect(isHappy(1)).toBeTruthy();
-    expect(isHappy(7)).toBeTruthy();
+  it('#1 should return true', () => {
+    const n = 19;
+    expect(isHappy(n)).toBe(true);
   });
 
-  it('should return false if the number is not happy', () => {
-    expect(isHappy(2)).toBeFalsy();
-    expect(isHappy(3)).toBeFalsy();
-    expect(isHappy(4)).toBeFalsy();
+  it('#2 should return false', () => {
+    const n = 2;
+    expect(isHappy(n)).toBe(false);
+  });
+
+  it('#3 should return false', () => {
+    const n = 3;
+    expect(isHappy(n)).toBe(false);
+  });
+
+  it('#4 should return true', () => {
+    const n = 7;
+    expect(isHappy(n)).toBe(true);
+  });
+
+  it('#5 should return true', () => {
+    const n = 1111111;
+    expect(isHappy(n)).toBe(true);
   });
 });

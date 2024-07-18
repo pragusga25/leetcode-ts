@@ -14,9 +14,28 @@ const minOperations = (logs: string[]): number => {
 };
 
 describe('Crawler Log Folder', () => {
-  it('should return the minimum number of operations', () => {
-    expect(minOperations(['d1/', 'd2/', './', 'd3/', '../', 'd31/'])).toBe(3);
-    expect(minOperations(['d1/', '../', '../', '../'])).toBe(0);
-    expect(minOperations(['../'])).toBe(0);
+  it('#1 should return 2', () => {
+    const logs = ['d1/', 'd2/', '../', 'd21/', './'];
+    expect(minOperations(logs)).toBe(2);
+  });
+
+  it('#2 should return 3', () => {
+    const logs = ['d1/', 'd2/', './', 'd3/', '../', 'd31/'];
+    expect(minOperations(logs)).toBe(3);
+  });
+
+  it('#3 should return 0', () => {
+    const logs = ['d1/', '../', '../', '../'];
+    expect(minOperations(logs)).toBe(0);
+  });
+
+  it('#4 should return 0', () => {
+    const logs = ['./', './', './'];
+    expect(minOperations(logs)).toBe(0);
+  });
+
+  it('#5 should return 1', () => {
+    const logs = ['d1/', './', './', './'];
+    expect(minOperations(logs)).toBe(1);
   });
 });

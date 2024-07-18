@@ -26,17 +26,33 @@ const isValid = (s: string): boolean => {
 };
 
 describe('Valid Parentheses', () => {
-  it('should return true for valid parentheses', () => {
-    expect(isValid('()')).toBe(true);
-    expect(isValid('()[]{}')).toBe(true);
-    expect(isValid('{[]}')).toBe(true);
-    expect(isValid('([{}])')).toBe(true);
+  it('#1 should return true', () => {
+    const s = '()';
+    expect(isValid(s)).toBe(true);
   });
 
-  it('should return false for invalid parentheses', () => {
-    expect(isValid('(]')).toBe(false);
-    expect(isValid('([)]')).toBe(false);
-    expect(isValid('[')).toBe(false);
-    expect(isValid(']')).toBe(false);
+  it('#2 should return true', () => {
+    const s = '()[]{}';
+    expect(isValid(s)).toBe(true);
+  });
+
+  it('#3 should return false', () => {
+    const s = '(]';
+    expect(isValid(s)).toBe(false);
+  });
+
+  it('#4 should return false', () => {
+    const s = '([)]';
+    expect(isValid(s)).toBe(false);
+  });
+
+  it('#5 should return true', () => {
+    const s = '{[]}';
+    expect(isValid(s)).toBe(true);
+  });
+
+  it('#6 should return false', () => {
+    const s = '[';
+    expect(isValid(s)).toBe(false);
   });
 });

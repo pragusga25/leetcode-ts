@@ -3,10 +3,18 @@
 const getConcatenation = (nums: number[]): number[] => [...nums, ...nums];
 
 describe('Concatenation of Array', () => {
-  it('should return the concatenated array', () => {
-    expect(getConcatenation([1])).toEqual([1, 1]);
-    expect(getConcatenation([1, 1])).toEqual([1, 1, 1, 1]);
-    expect(getConcatenation([1, 2, 1])).toEqual([1, 2, 1, 1, 2, 1]);
-    expect(getConcatenation([1, 3, 2, 1])).toEqual([1, 3, 2, 1, 1, 3, 2, 1]);
+  it('#1 should return [1, 2, 1, 1, 2, 1]', () => {
+    const nums = [1, 2, 1];
+    expect(getConcatenation(nums)).toStrictEqual([1, 2, 1, 1, 2, 1]);
+  });
+
+  it('#2 should return [1, 3, 2, 1, 1, 3, 2, 1]', () => {
+    const nums = [1, 3, 2, 1];
+    expect(getConcatenation(nums)).toStrictEqual([1, 3, 2, 1, 1, 3, 2, 1]);
+  });
+
+  it('#3 should return [1, 2, 3, 1, 2, 3]', () => {
+    const nums = [1, 2, 3];
+    expect(getConcatenation(nums)).toStrictEqual([1, 2, 3, 1, 2, 3]);
   });
 });

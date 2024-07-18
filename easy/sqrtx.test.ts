@@ -22,19 +22,28 @@ const mySqrt = (x: number): number => {
 };
 
 describe('Sqrt(x)', () => {
-  it('should return the square root of x', () => {
-    expect(mySqrt(0)).toBe(0);
-    expect(mySqrt(1)).toBe(1);
-    expect(mySqrt(2)).toBe(1);
-    expect(mySqrt(4)).toBe(2);
-    expect(mySqrt(8)).toBe(2);
-    expect(mySqrt(9)).toBe(3);
-    expect(mySqrt(16)).toBe(4);
-    expect(mySqrt(25)).toBe(5);
-    expect(mySqrt(36)).toBe(6);
-    expect(mySqrt(49)).toBe(7);
-    expect(mySqrt(64)).toBe(8);
-    expect(mySqrt(81)).toBe(9);
-    expect(mySqrt(100)).toBe(10);
+  it('#1 should return 2', () => {
+    const x = 4;
+    expect(mySqrt(x)).toBe(2);
+  });
+
+  it('#2 should return 2', () => {
+    const x = 8;
+    expect(mySqrt(x)).toBe(2);
+  });
+
+  it('#3 should return 1', () => {
+    const x = 1;
+    expect(mySqrt(x)).toBe(1);
+  });
+
+  it('#4 should return 46340', () => {
+    const x = 2147395600;
+    expect(mySqrt(x)).toBe(46340);
+  });
+
+  it('#5 should return 0', () => {
+    const x = 0;
+    expect(mySqrt(x)).toBe(0);
   });
 });

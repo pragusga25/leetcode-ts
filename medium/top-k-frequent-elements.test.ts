@@ -35,18 +35,33 @@ const topKFrequent = (nums: number[], k: number): number[] => {
 const sortNums = (nums: number[]): number[] => nums.sort((a, b) => a - b);
 
 describe('Top K Frequent Elements', () => {
-  it('should return top 1 frequent element', () => {
-    expect(sortNums(topKFrequent([1, 1, 1, 2, 2, 3], 1))).toEqual([1]);
-    expect(sortNums(topKFrequent([1], 1))).toEqual([1]);
+  it('#1 should return [1, 2]', () => {
+    const nums = [1, 1, 1, 2, 2, 3];
+    const k = 2;
+    expect(sortNums(topKFrequent(nums, k))).toEqual([1, 2]);
   });
 
-  it('should return top 2 frequent elements', () => {
-    expect(sortNums(topKFrequent([1, 1, 1, 2, 2, 3], 2))).toEqual([1, 2]);
-    expect(sortNums(topKFrequent([1], 1))).toEqual([1]);
+  it('#2 should return [1]', () => {
+    const nums = [1];
+    const k = 1;
+    expect(sortNums(topKFrequent(nums, k))).toEqual([1]);
   });
 
-  it('should return top 3 frequent elements', () => {
-    expect(sortNums(topKFrequent([1, 1, 1, 2, 2, 3], 3))).toEqual([1, 2, 3]);
-    expect(sortNums(topKFrequent([1], 1))).toEqual([1]);
+  it('#3 should return [1, 2]', () => {
+    const nums = [1, 2];
+    const k = 2;
+    expect(sortNums(topKFrequent(nums, k))).toEqual([1, 2]);
+  });
+
+  it('#4 should return [1]', () => {
+    const nums = [1, 1, 1, 2, 2, 3];
+    const k = 1;
+    expect(sortNums(topKFrequent(nums, k))).toEqual([1]);
+  });
+
+  it('#5 should return [1, 2, 3]', () => {
+    const nums = [1, 1, 1, 2, 2, 3];
+    const k = 3;
+    expect(sortNums(topKFrequent(nums, k))).toEqual([1, 2, 3]);
   });
 });

@@ -37,12 +37,31 @@ const depthSort = (result: string[][]) => {
 };
 
 describe('Group Anagrams', () => {
-  it('should group anagrams', () => {
-    expect(
-      depthSort(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']))
-    ).toEqual(depthSort([['bat'], ['nat', 'tan'], ['ate', 'eat', 'tea']]));
+  it('#1 should return [["bat"],["nat","tan"],["ate","eat","tea"]]', () => {
+    const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+    const result = groupAnagrams(strs);
+    expect(depthSort(result)).toEqual(
+      depthSort([['bat'], ['nat', 'tan'], ['ate', 'eat', 'tea']])
+    );
+  });
 
-    expect(depthSort(groupAnagrams(['']))).toEqual(depthSort([['']]));
-    expect(depthSort(groupAnagrams(['a']))).toEqual(depthSort([['a']]));
+  it('#2 should return [[""]]', () => {
+    const strs = [''];
+    const result = groupAnagrams(strs);
+    expect(depthSort(result)).toEqual([['']]);
+  });
+
+  it('#3 should return [["a"]]', () => {
+    const strs = ['a'];
+    const result = groupAnagrams(strs);
+    expect(depthSort(result)).toEqual([['a']]);
+  });
+
+  it('#4 should return [["a","a","a","a","a","a","a","a","a","a"]]', () => {
+    const strs = ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'];
+    const result = groupAnagrams(strs);
+    expect(depthSort(result)).toEqual([
+      ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'],
+    ]);
   });
 });

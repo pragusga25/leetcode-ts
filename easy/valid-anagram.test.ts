@@ -30,17 +30,33 @@ const isAnagram = (s: string, t: string): boolean => {
 };
 
 describe('Valid Anagram', () => {
-  it('should return true if the strings are anagrams', () => {
-    expect(isAnagram('anagram', 'nagrama')).toBe(true);
-    expect(isAnagram('', '')).toBe(true);
-    expect(isAnagram('a', 'a')).toBe(true);
-    expect(isAnagram('kasur', 'rusak')).toBe(true);
+  it('#1 should return true', () => {
+    const s = 'anagram';
+    const t = 'nagaram';
+    expect(isAnagram(s, t)).toBe(true);
   });
 
-  it('should return false if the strings are not anagrams', () => {
-    expect(isAnagram('anagram', 'nagram')).toBe(false);
-    expect(isAnagram('', 'a')).toBe(false);
-    expect(isAnagram('a', '')).toBe(false);
-    expect(isAnagram('kasur', 'sura')).toBe(false);
+  it('#2 should return false', () => {
+    const s = 'rat';
+    const t = 'car';
+    expect(isAnagram(s, t)).toBe(false);
+  });
+
+  it('#3 should return false', () => {
+    const s = 'a';
+    const t = 'ab';
+    expect(isAnagram(s, t)).toBe(false);
+  });
+
+  it('#4 should return false', () => {
+    const s = 'a';
+    const t = 'b';
+    expect(isAnagram(s, t)).toBe(false);
+  });
+
+  it('#5 should return true', () => {
+    const s = 'a';
+    const t = 'a';
+    expect(isAnagram(s, t)).toBe(true);
   });
 });

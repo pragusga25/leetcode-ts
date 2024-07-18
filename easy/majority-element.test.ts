@@ -18,8 +18,28 @@ const majorityElement = (nums: number[]): number => {
 };
 
 describe('Majority Element', () => {
-  it('should return the majority element', () => {
-    expect(majorityElement([3, 2, 3])).toBe(3);
-    expect(majorityElement([2, 2, 1, 1, 1, 2, 2])).toBe(2);
+  it('#1 should return 3', () => {
+    const nums = [3, 2, 3];
+    expect(majorityElement(nums)).toBe(3);
+  });
+
+  it('#2 should return 2', () => {
+    const nums = [2, 2, 1, 1, 1, 2, 2];
+    expect(majorityElement(nums)).toBe(2);
+  });
+
+  it('#3 should return 3', () => {
+    const nums = [3, 3, 4];
+    expect(majorityElement(nums)).toBe(3);
+  });
+
+  it('#4 should return 3', () => {
+    const nums = [3, 3, 3, 3, 3, 3, 3];
+    expect(majorityElement(nums)).toBe(3);
+  });
+
+  it('#5 should return 1', () => {
+    const nums = [1];
+    expect(majorityElement(nums)).toBe(1);
   });
 });

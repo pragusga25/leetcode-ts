@@ -20,14 +20,24 @@ const generate = (numRows: number): number[][] => {
 };
 
 describe("Pascal's Triangle", () => {
-  it('should return the pascal triangle', () => {
-    expect(generate(5)).toEqual([
+  it('#1 should return [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]', () => {
+    const numRows = 5;
+    expect(generate(numRows)).toStrictEqual([
       [1],
       [1, 1],
       [1, 2, 1],
       [1, 3, 3, 1],
       [1, 4, 6, 4, 1],
     ]);
-    expect(generate(1)).toEqual([[1]]);
+  });
+
+  it('#2 should return [[1],[1,1],[1,2,1]]', () => {
+    const numRows = 3;
+    expect(generate(numRows)).toStrictEqual([[1], [1, 1], [1, 2, 1]]);
+  });
+
+  it('#3 should return [[1],[1,1]]', () => {
+    const numRows = 2;
+    expect(generate(numRows)).toStrictEqual([[1], [1, 1]]);
   });
 });

@@ -14,14 +14,28 @@ const containsDuplicate = (nums: number[]): boolean => {
 };
 
 describe('Contains Duplicate', () => {
-  it('should return true if the array contains duplicates', () => {
-    expect(containsDuplicate([1, 2, 3, 4, 1])).toBe(true);
-    expect(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])).toBe(true);
+  it('#1 should return true', () => {
+    const nums = [1, 2, 3, 1];
+    expect(containsDuplicate(nums)).toBe(true);
   });
 
-  it('should return false if the array does not contain duplicates', () => {
-    expect(containsDuplicate([])).toBe(false);
-    expect(containsDuplicate([0])).toBe(false);
-    expect(containsDuplicate([1, 2, 3, 4])).toBe(false);
+  it('#2 should return false', () => {
+    const nums = [1, 2, 3, 4];
+    expect(containsDuplicate(nums)).toBe(false);
+  });
+
+  it('#3 should return true', () => {
+    const nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
+    expect(containsDuplicate(nums)).toBe(true);
+  });
+
+  it('#4 should return false', () => {
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    expect(containsDuplicate(nums)).toBe(false);
+  });
+
+  it('#5 should return true', () => {
+    const nums = [1, 1];
+    expect(containsDuplicate(nums)).toBe(true);
   });
 });
